@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker, relationship
 from sqlalchemy.orm import Session
 import psycopg2
 
-DATABASE_URL = "postgresql://postgres:postgres@localhost/schedule"
+DATABASE_URL = "postgresql://postgres:postgres@192.168.0.120:5432/schedule"
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()

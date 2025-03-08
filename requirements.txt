@@ -2,3 +2,5 @@ fastapi
 uvicorn
 requests
 ics
+sqlalchemy
+psycopg2
