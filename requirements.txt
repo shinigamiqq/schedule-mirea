@@ -4,3 +4,4 @@ requests
 ics
 sqlalchemy
 psycopg2
+python-dotenv

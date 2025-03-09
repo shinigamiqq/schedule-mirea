@@ -3,8 +3,13 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
 from sqlalchemy.orm import Session
 import psycopg2
+from dotenv import load_dotenv
+import os
 
-DATABASE_URL = "postgresql://postgres:postgres@192.168.0.120:5432/schedule"
+
+load_dotenv()
+
+DATABASE_URL = os.getenv("DATABASE_URL")
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
